@@ -1,4 +1,4 @@
-(5) Version control and branch management (Git)
+#(5) Version control and branch management (Git)#
 - belajar cara menginisialisasi git repository localy
 - belajar bagaimana cara melakukan push pada repository github
 - belajar cara melakukan pull dari branch yang berbeda
