@@ -3,6 +3,8 @@
 - belajar bagaimana cara melakukan push pada repository github (git add . --> git commit -m "comment" --> git push origin nama-branch)
 - belajar cara melakukan pull dari branch yang berbeda (git pull origin nama-branch)
 - belajar cara melakukan merge branch (git merge new-feature)
+- cara berpindah branch (git checkout nama-branch)
+- menghapus branch (git branch -D nama-branch)
 - belajar cara mengatasi konflik pada saat melakukan proses merge
 - belajar cara membuat workflow branch github untuk memudahkan kolaborasi 
   * github flow
