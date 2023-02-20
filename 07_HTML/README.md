@@ -2,10 +2,10 @@
 - Membuat struktur dasar HTML
   ![image](https://user-images.githubusercontent.com/93898408/220032275-846aecce-8a22-463f-a48e-ee2dbd2f0cbf.png)
 - Membuat table
-  https://www.notion.so/Pemrograman-WEB-65d0aaa0dce24aa7969d0321ebb2dafa?pvs=4#ec5dcb6dd03a48fdb02e422ace5a81c5
+  ![image](https://user-images.githubusercontent.com/93898408/220032895-fef00492-43d0-4c6b-bcc0-dc817b0a2e38.png)
   Tag table umum
-  https://www.notion.so/Pemrograman-WEB-65d0aaa0dce24aa7969d0321ebb2dafa?pvs=4#75ba56380ceb491990a4021e5eca34c8
+  ![image](https://user-images.githubusercontent.com/93898408/220032985-48360a0b-3c66-456c-82f2-c504ae830b15.png)
 - Membuat form
-  https://www.notion.so/Pemrograman-WEB-65d0aaa0dce24aa7969d0321ebb2dafa?pvs=4#2cfff77407fc4296a2c3cf91650fd111
+  ![image](https://user-images.githubusercontent.com/93898408/220033043-28696272-8aad-45b7-870e-254dca03a591.png)
   Tag form umum
-  https://www.notion.so/Pemrograman-WEB-65d0aaa0dce24aa7969d0321ebb2dafa?pvs=4#89cdaf6271374cbd9d6bb9d8f5630c82
+  ![image](https://user-images.githubusercontent.com/93898408/220033089-600a647c-08ec-4281-8b89-db04df521f74.png)
