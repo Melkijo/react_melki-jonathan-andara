@@ -1,4 +1,6 @@
 # (7) HTML #
+## Intorduction ##
+HTML (HyperText Markup Language) adalah bahasa markup yang digunakan untuk membuat struktur dari sebuah website, Bahasa ini ditemukan oleh Tim Berners-Lee pada tahun 1991.
 - Membuat struktur dasar HTML
   * ![image](https://user-images.githubusercontent.com/93898408/220032275-846aecce-8a22-463f-a48e-ee2dbd2f0cbf.png)
 - Membuat table
