@@ -4,15 +4,96 @@
     font-family:'jost', 'sans-serif';
 }
 
+h1{
+    font-weight: 700;
+    font-size: 48px;
+}
+h2{
+    font-weight: 600;
+    font-size: 24px;
+}
+h5{
+    font-weight: 300;
+    font-size: 24px;
+}
 .hero-section{
     width: 100%;
     background-color:#37517E;
     display: flex;
     justify-content: center;
     color: #FFFFFF;
+    
 
+}
+
+.hero-content{
+    display: flex;
+    align-items: center;
+    padding: 50px 100px;
+}
+
+.hero-content-title{
+    padding-right: 50px;
+}
+
+.hero-content-cta{
+    display: flex;
+    align-items: center;
+    margin-top: 57px;
+    gap: 50px;
+}
+
+.hero-content-cta-btn{
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    padding: 9px 28px 12px;
+    background-color: #47B2E4;
+    border: none;
+    border-radius: 50px;
+}
+
+.hero-content-cta-link{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .cta-section{
     background-color: #F3F5FA;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cta-title{
+    color: #37517E;
+}
+
+.cta-subtitle{
+    color: #444444;
+    font-weight: 400;
+    font-size: 15px;
+}
+.cta-form{
+    display: flex;
+}
+
+.cta-form-email{
+    padding: 6px 300px 6px 20px;
+    border: none;
+    border-radius: 50px;
+}
+
+.cta-form-submit{
+    position: relative;
+    right: 107px;
+    font-weight: 400;
+    font-size: 16px;
+    color: white;
+    padding: 9px 20px;
+    background-color: #47B2E4;
+    border: none;
+    border-radius: 50px;
 }
