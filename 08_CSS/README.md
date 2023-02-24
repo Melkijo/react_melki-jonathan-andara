@@ -10,11 +10,14 @@ CSS (Cascanding Styles Sheet) adalah bahasa yang digunakan untuk membuat aturan 
 
 ## Aturan Penulisan CSS ##
 * external
-  * ![image](https://user-images.githubusercontent.com/93898408/221168822-1a2fe2e7-05b3-48cf-a4b1-deda26a33963.png)
   Penulisan css pada berkas yang terpisah, pada html akan diberikan link untuk menyambungkan file css.
+  * ![image](https://user-images.githubusercontent.com/93898408/221168822-1a2fe2e7-05b3-48cf-a4b1-deda26a33963.png)
+  
 * Internal
-  * ![image](https://user-images.githubusercontent.com/93898408/221168981-0d936b7e-13e2-4af0-81d3-2455a2e4e448.png)
   Ditulis pada satu file HTML yang sama, akan ditaruh penulisannya pada tag head.
+  * ![image](https://user-images.githubusercontent.com/93898408/221168981-0d936b7e-13e2-4af0-81d3-2455a2e4e448.png)
+  
 * Inline
-  * ![image](https://user-images.githubusercontent.com/93898408/221169162-5a063241-c9bf-407a-bb47-58a321f84787.png)
   Ditulis pada tag yang akan diubah pengayaannya.
+  * ![image](https://user-images.githubusercontent.com/93898408/221169162-5a063241-c9bf-407a-bb47-58a321f84787.png)
+  
