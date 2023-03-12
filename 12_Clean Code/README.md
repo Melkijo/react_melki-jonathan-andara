@@ -14,17 +14,17 @@ Clean code adalah cara sebuah program dituliskan agar mudah dipahami, di-maintai
   Penggunaan komentar yang jelas memudahkan maintenace kode dikemudian hari
   
   ## Principle ##
-  - KISS (Keep It So Simple)
-    Hindari membuat fungsi yang dibuat untuk melakukan A, sekaligus memodifikasi B dan Mengecek fungsi C.
+  - KISS (Keep It So Simple) <br>
+    Hindari membuat fungsi yang dibuat untuk melakukan A, sekaligus memodifikasi B dan Mengecek fungsi C. <br>
     Tips
     - Fungsi harus kecil
     - Fungsi dibuat untuk melakukan satu tugas saja
     - Jangan gunakan terlalu banyak argument pada fungsi
     - Kecil dan jumlahnya minimal
     
-  - DRY (Dont Repeat Yourself)
+  - DRY (Dont Repeat Yourself) <br>
     Duplikasi code sering terjadi karena copy paste, untuk menghindari duplikasi code buatlah fungsi yang dapat digunakan secara berulang ulang.
-  - YAGNI (You Ain't Gonna Need It)
+  - YAGNI (You Ain't Gonna Need It) <br>
     Sebuah code haru ditulis hanya untuk fitur yang diperlukan dan tidak perlu menambahkan fitur yang tidak dibutuhkan.
     
  ## Refactoring Code ##
