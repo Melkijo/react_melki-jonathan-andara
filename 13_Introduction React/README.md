@@ -13,6 +13,6 @@ React memiliki komunitas yang besar dan aktif, yang terus memperbaharui dan meni
  ### Creat React App (CRA) ###
  adalah alat pengembangan yang disediakan oleh tim pengembang React untuk memudahkan pengembangan aplikasi React tanpa harus melakukan konfigurasi awal secara manual. Dengan Create React App, pengembang dapat memulai proyek React mereka dengan cepat dan mudah tanpa harus memikirkan tentang konfigurasi awal. Create React App telah dikonfigurasi secara default untuk pengembangan aplikasi React, dan dapat disesuaikan jika diperlukan. <cbr>
  Cara Konfigurasi :
-$ npx create-react-app my-app
+```$ npx create-react-app my-app
 $ cd my-app
-$ npm start
+$ npm start```
