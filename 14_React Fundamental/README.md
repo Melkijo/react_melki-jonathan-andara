@@ -72,8 +72,3 @@ function greeting (props) {
   </div>
   )
 }
-  if (isLoggedIn){
-    return <User Greeting />
-  }
-    return <GuestGreeting />
-}
