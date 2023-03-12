@@ -51,3 +51,29 @@ function greeting (props) {
     return <GuestGreeting />
 }
 ```
+- Inline if operator &&
+```javascript
+function greeting (props) {
+  const isLoggedIn = props.isLoggedIn;
+  return (
+  <div>
+  <h1>Hello</h1> {isLoggedIn.value === true && <h2> user </h2>} 
+  </div>
+  )
+}
+```
+- Inline if-else conditional Operator
+```javascript
+function greeting (props) {
+  const isLoggedIn = props.isLoggedIn;
+  return (
+  <div>
+  <h1>Hello</h1> {isLoggedIn ? <h2> user </h2> : <h2> guest </h2>} 
+  </div>
+  )
+}
+  if (isLoggedIn){
+    return <User Greeting />
+  }
+    return <GuestGreeting />
+}
