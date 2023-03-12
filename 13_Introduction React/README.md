@@ -11,10 +11,20 @@ React memiliki komunitas yang besar dan aktif, yang terus memperbaharui dan meni
  ## Create React App (CRA) VS Vite ##
  Create React App dan Vite adalah dua alat pengembangan (development tools) yang dapat digunakan untuk mempermudah pengembangan aplikasi web dengan menggunakan React. <br>
  ### Creat React App (CRA) ###
- adalah alat pengembangan yang disediakan oleh tim pengembang React untuk memudahkan pengembangan aplikasi React tanpa harus melakukan konfigurasi awal secara manual. Dengan Create React App, pengembang dapat memulai proyek React mereka dengan cepat dan mudah tanpa harus memikirkan tentang konfigurasi awal. Create React App telah dikonfigurasi secara default untuk pengembangan aplikasi React, dan dapat disesuaikan jika diperlukan. <cbr>
+ adalah alat pengembangan yang disediakan oleh tim pengembang React untuk memudahkan pengembangan aplikasi React tanpa harus melakukan konfigurasi awal secara manual. Dengan Create React App, pengembang dapat memulai proyek React mereka dengan cepat dan mudah tanpa harus memikirkan tentang konfigurasi awal. Create React App telah dikonfigurasi secara default untuk pengembangan aplikasi React, dan dapat disesuaikan jika diperlukan. <br>
  Cara Konfigurasi :
 ```
 $ npx create-react-app my-app
 $ cd my-app
 $ npm start
 ```
+### Vite ###
+Vite adalah alat pengembangan yang baru dan cepat untuk membangun aplikasi web dengan menggunakan teknologi modern. Vite menyediakan pengalaman pengembangan yang cepat dan ringan dengan menggunakan fitur-fitur seperti hot module replacement (HMR) dan tree-shaking. Vite juga mendukung pengembangan SSR (server-side rendering) dan memungkinkan pengembang untuk mengatur proyek mereka secara fleksibel dengan menggunakan plugin-plugin yang tersedia. <br>
+Cara Konfigurasi :
+```
+$ npm create vite@latest my-project
+$ cd my-project
+$ npm install
+$ npm run dev
+```
+
