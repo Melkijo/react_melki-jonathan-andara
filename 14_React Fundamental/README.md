@@ -23,3 +23,31 @@ function Greeting (props) {
   return <h1> Hello, {props.name}</h1>;
 }
 ```
+#### Class Component ####
+adalah komponent react yang didefinisikan sebagai sebuah class Class ini akan mewarisi sifat-sifat dari kelas React.Component dan memiliki fungsi render() yang mengembalikan elemen React. <br>
+```javascript
+class Greeting extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}!</h1>;
+  }
+}
+```
+#### Perbedaan ####
+1. Penanganan Lifecycle Methods <br>
+Dalam class component, dapat menggunakan lifescycle method seperti componentDidMount(), componentDidUpdate(), dan componentWillUnmount(). Sedangkan dalam Function Component, kita dapat menggunakan hooks seperti useEffect()
+2. Definisi <br>
+function component adalah fungsi, sedangkan class component adalah class.
+
+## Render ##
+sebuah method yang ada pada komponen React. Method ini mengambil nilai props dan state dari sebuah komponen dan mengembalikan sebuah elemen React yang akan ditampilkan pada halaman web.
+### Render bersyarat ###
+- Menggunakan if
+```javascript
+function greeting (props) {
+const isLoggedIn = props.isLoggedIn;
+if (isLoggedIn){
+return <User Greeting />
+}
+return <GuestGreeting />
+}
+```
