@@ -18,8 +18,8 @@ Komponen React adalah bagian kode yang dapat digunakan kembali yang bisa digunak
 adalah dua jenis komponen dalam react yang digunakan untuk membuat UI
 #### Function Component ####
 adalah komponen react yang didefinisikan sebagai sebuah fungsi, fungsi ini akan menerima props sebagai parameter dan mengembalikan elemen React. <br>
-```
-$ function Greeting (props) {
-$  return <h1> Hello, {props.name}</h1>;
-$ }
+```javascript
+function Greeting (props) {
+  return <h1> Hello, {props.name}</h1>;
+}
 ```
