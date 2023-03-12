@@ -119,7 +119,6 @@ productForm.addEventListener("submit", (e) => {
     e.preventDefault();
     checkProductNameAndPrice(productName, productPrice);
 
-    //Memasukan setiap variabel dalam array untuk menghindari penulisan code berulang
     const productData = [productName.value, productCategory.value, productFreshness.value, productImage.files[0].name, productDesc.value, productPrice.value];
     const productDataTitle = ["Product Name", "Product Category", "Product Freshness", "Product Image", "Product Description", "Product Price"];
 
