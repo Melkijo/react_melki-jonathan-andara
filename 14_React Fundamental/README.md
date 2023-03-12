@@ -44,10 +44,10 @@ sebuah method yang ada pada komponen React. Method ini mengambil nilai props dan
 - Menggunakan if
 ```javascript
 function greeting (props) {
-const isLoggedIn = props.isLoggedIn;
-if (isLoggedIn){
-return <User Greeting />
-}
-return <GuestGreeting />
+  const isLoggedIn = props.isLoggedIn;
+  if (isLoggedIn){
+    return <User Greeting />
+  }
+    return <GuestGreeting />
 }
 ```
