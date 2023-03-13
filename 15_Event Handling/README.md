@@ -1,4 +1,6 @@
 # (15) Event handling #
+Suatu metode untuk menangani sebuah event/aksi yang diberikan oleh pengguna pada suatu komponen. <br>
+**Event** adalah suatu kondisi yang dipicu oleh interaksi pengguna pada komponen.
 ## Stateful Component vs Stateless Component ##
 ### Stateful Component / smart component / container component ###
 artiannya adalah memiliki sebuah state, component ini dibuat dengan class, kelebihan dari class component adalah memiliki lifecycle.
