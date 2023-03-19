@@ -6,7 +6,6 @@ import ProductDesc from "../components/productDesc";
 import "./Form.css";
 import RandomNumberBtn from "../components/RandomNumberBtn";
 import { v4 as uuidv4 } from "uuid";
-// import "./FormFunc";
 
 import { useState } from "react";
 
@@ -50,7 +49,8 @@ export default function Form() {
     setProductPrice("");
   };
 
-  const handleDeleteProduct = (product) => {
+  const handleDeleteProduct = (e, product) => {
+    console.log(productList);
     Swal.fire({
       title: `Are you sure delete ${product.productName} ?`,
       showDenyButton: true,
@@ -60,7 +60,7 @@ export default function Form() {
       if (result.isConfirmed) {
         Swal.fire(`${product.productName} deleted`, "", "success");
         const newList = [...productList];
-        newList.splice(product.id, 1);
+        newList.splice(e, 1);
         setProductList(newList);
       } else if (result.isDenied) {
         Swal.fire("Changes are not saved", "", "info");
@@ -187,7 +187,7 @@ export default function Form() {
           </tr>
         </thead>
         <tbody>
-          {productList.map((product) => (
+          {productList.map((product, index) => (
             <tr key={product.id}>
               <td>{parseInt(product.id.split("-")[0], 16) % 10000}</td>
               <td>{product.productName}</td>
@@ -201,7 +201,7 @@ export default function Form() {
                 <button
                   type="button"
                   className="btn-delete"
-                  onClick={() => handleDeleteProduct(product)}
+                  onClick={() => handleDeleteProduct(index, product)}
                 >
                   Delete
                 </button>
