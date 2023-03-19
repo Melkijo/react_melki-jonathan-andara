@@ -1,20 +1,21 @@
+import styles from "./FormulirPage.module.css";
 export default function FormulirPage() {
   return (
     <>
-      <h1>Formulir Buku Baru</h1>
-      <form id="fomrBuku">
-        <label>Judul</label>
-        <br />
-        <input type="text" name="" id="" />
-        <br />
-        <label>Pengarang</label>
-        <br />
-        <input type="text" name="" id="" />
-        <br />
-        <label htmlFor="">Cetakan</label>
-        <br />
-        <input type="text" name="" id="" />
-        <br />
+      <form id="fomrBuku" className={styles.form}>
+        <h1>Formulir Buku Baru</h1>
+        <label>
+          Judul:
+          <input type="text" name="" id="" className={styles.input} />
+        </label>
+        <label>
+          Pengarang
+          <input type="text" name="" id="" className={styles.input} />
+        </label>
+        <label htmlFor="">
+          Cetakan
+          <input type="text" name="" id="" className={styles.input} />
+        </label>
         <input type="submit" value="Submit" />
         <input type="reset" value="Reset" />
       </form>
