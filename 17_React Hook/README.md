@@ -11,7 +11,7 @@ React hook adlaah fitur yang dikenalkan oleh React versi 16.8, digunakan untuk m
 ## useState ##
 dalah salah satu hook pada React yang digunakan untuk membuat dan memanipulasi state pada sebuah functional component. Dalam React, state digunakan untuk menyimpan data atau informasi yang dapat berubah-ubah selama komponen tersebut di-render. <br>
 contoh implementasi:
-``javascript
+```javascript
 import React, { useState } from 'react';
 
 function Counter() {
@@ -28,4 +28,4 @@ function Counter() {
     </div>
   );
 }
-``
+```
