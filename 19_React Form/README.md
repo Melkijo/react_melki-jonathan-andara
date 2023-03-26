@@ -23,3 +23,29 @@ adalah cara mengelola input data form dari pengguna dari sebuah web menggunakan 
   <option value="orange">Orange</option>
   </select>
   ```
+  
+## Controlled Component ##
+adalah suatu komponen yang keadaannya selalu dikendalikan oleh state dalam komponen parentnya. <br>
+```javascript
+function App() {
+  const [name, setName] = useState('');
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  }
+
+  return (
+    <div>
+      <label htmlFor="nameInput">Enter your name:</label>
+      <input 
+        type="text" 
+        id="nameInput" 
+        value={name} 
+        onChange={handleNameChange} 
+      />
+      <p>Hello, {name}!</p>
+    </div>
+  );
+}
+```
+seperti pada code di atas, nilai value pada tag input diisikan oleh variabel name yang dikendalikan oleh function handlenameChange.
