@@ -18,7 +18,7 @@ Reducer merupakan fungsi yang digunakan untuk mengubah state aplikasi berdasarka
 
 Refrensi lain untuk global state management : zustand, jotai
 
-## Data Fethinng ##
+## Data Fetching ##
  proses mengambil data dari sumber eksternal, Secara umum, data fetching pada React memerlukan tiga tahap: pengiriman permintaan data, penanganan respons data, dan pengolahan data untuk ditampilkan pada aplikasi React. Setelah data diterima, data tersebut dapat ditampilkan pada aplikasi React dengan menggunakan props atau state dan kemudian digunakan untuk meng-update UI sesuai dengan kebutuhan aplikasi. <br>
  contoh Implementasi: <br>
 ```javascript 
