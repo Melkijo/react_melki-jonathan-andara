@@ -9,7 +9,6 @@ import ProductPrice from "../components/ProductPrice";
 import BtnSubmit from "../components/BtnSubmit";
 import "./Form.css";
 import RandomNumberBtn from "../components/RandomNumberBtn";
-// import "./FormFunc";
 
 import ProductList from "../components/ProductList";
 export default function Form() {
