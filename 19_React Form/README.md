@@ -75,3 +75,13 @@ function App() {
 }
 ```
 seperti pada code diatas tag input file akan memberikan nilai ke variabel fileInputRef melalui properti ref.
+
+## Basic Validation ##
+perlu dilakukan vaildasi form untuk mencari input data yang benar dan sesuai format, melindungi akun pnegguna dan juga untuk melindungi sistem atau aplikasi yang menjalankan input.
+### Tipe validasi Data ###
+#### Client Side validation ####
+validasi dilakukan pada sisi klien, validasi ini diperuntukan agar setiap data input pengguna sesuai dengan format, sebelum data form dilanjutkan ke server. hal ini dapat dilakukan dengan menggunakan: <br>
+- Built-in form validation yaitu menggunakan fitur validasi langsung dari HTML5
+- javascript yaitu validasi form yang dapat dikustomisasi sendiri
+#### Server-side validation ####
+proses validasi data yang dilakukan pada sisi server dalam pengembangan aplikasi web. Tujuan dari server-side validation adalah untuk memastikan data yang diterima dari klien sudah benar dan valid sebelum data tersebut diproses lebih lanjut.
