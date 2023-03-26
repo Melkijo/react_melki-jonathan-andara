@@ -17,9 +17,9 @@ adalah cara mengelola input data form dari pengguna dari sebuah web menggunakan 
   digunakan untuk inputan yang memiliki pilihan <br>
   ```javascript
   <label for="fruit">Choose a fruit:</label>
-<select id="fruit">
+  <select id="fruit">
   <option value="apple">Apple</option>
   <option value="banana">Banana</option>
   <option value="orange">Orange</option>
-</select>
+  </select>
   ```
