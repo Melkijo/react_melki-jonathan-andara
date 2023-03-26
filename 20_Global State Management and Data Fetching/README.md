@@ -3,4 +3,15 @@
 **Data Fetching** adalah proses mengambil atau memuat data dari sumber eksternal.
  
  ## Redux ##
- adalah library JavaScript yang digunakan untuk mengelola state (keadaan) global dalam aplikasi, terutama pada aplikasi yang kompleks dengan banyak interaksi dan perubahan data.
+ adalah library JavaScript yang digunakan untuk mengelola state (keadaan) global dalam aplikasi, terutama pada aplikasi yang kompleks dengan banyak interaksi dan perubahan data. Kapan saat menggunakan redux:
+- aplikasi atau web memiliki state yang kompleks
+- state dibagikan ke berbagai komponen
+- codebase yang sudah besar dan dikerjakan banyak orang
+
+### Komponen Penting Redux ###
+#### Actions ####
+Action merupakan sebuah objek yang mendefinisikan perubahan state yang terjadi dalam aplikasi. Action ini dikirim ke reducer dan reducer akan memperbarui state sesuai dengan perintah dalam action.
+#### Store ####
+ Store merupakan tempat penyimpanan utama untuk state dalam Redux. Store berisi seluruh state aplikasi dan memberikan akses ke state tersebut ke seluruh komponen aplikasi.
+#### Reducer ####
+Reducer merupakan fungsi yang digunakan untuk mengubah state aplikasi berdasarkan aksi yang diterima. Reducer menerima action sebagai input, dan kemudian memperbarui state berdasarkan aksi tersebut.
