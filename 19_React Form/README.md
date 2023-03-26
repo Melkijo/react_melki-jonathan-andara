@@ -49,3 +49,29 @@ function App() {
 }
 ```
 seperti pada code di atas, nilai value pada tag input diisikan oleh variabel name yang dikendalikan oleh function handlenameChange.
+
+## Uncontrolled Component ##
+komponen input yang nilai atau keadaannya dikontrol oleh DOM, bukan oleh state pada komponen React-nya. <br>
+```javascript
+function App() {
+  const fileInputRef = useRef();
+
+  const handleFileUpload = () => {
+    const file = fileInputRef.current.files[0];
+    console.log(file);
+  }
+
+  return (
+    <div>
+      <label htmlFor="fileInput">Choose a file:</label>
+      <input 
+        type="file" 
+        id="fileInput" 
+        ref={fileInputRef} 
+      />
+      <button onClick={handleFileUpload}>Upload</button>
+    </div>
+  );
+}
+```
+seperti pada code diatas tag input file akan memberikan nilai ke variabel fileInputRef melalui properti ref.
