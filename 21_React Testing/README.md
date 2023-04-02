@@ -13,4 +13,7 @@ Pengujian statis adalah jenis pengujian perangkat lunak yang dilakukan tanpa mel
 ## Rekomendasi Tool Testing ##
 ### Vitest ###
 vitest adalah tool testing yang memiliki kinerja melakukan test yang jauh lebih cepat dibandingkan tool yang lainnya <br>
-how to install https://vitest.dev/guide/
+how to use https://vitest.dev/guide/
+### Jest ###
+jest adalah tool testing yang berfokus pada penyederhanaan <br>
+how to use https://jestjs.io/docs/getting-started
