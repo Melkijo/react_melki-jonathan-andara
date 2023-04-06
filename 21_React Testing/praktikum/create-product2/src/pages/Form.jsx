@@ -21,7 +21,20 @@ export default function Form() {
     setProductName(event.target.value);
     const regex = /^[a-zA-Z]+$/;
     if (!regex.test(event.target.value)) {
-      Swal.fire("Name must not include number or symbol");
+      Swal.fire({
+        text: "Name must not include number or symbol",
+        customClass: {
+          container: "symbolInput",
+        },
+      });
+    }
+    if (productName.length > 25) {
+      Swal.fire({
+        text: "Name must not over 25 character",
+        customClass: {
+          container: "lengthInput",
+        },
+      });
     }
   };
 
@@ -72,7 +85,12 @@ export default function Form() {
   const handleOnSubmit = (data) => {
     data.preventDefault(0);
     if (!checkValid()) {
-      Swal.fire("all inputs are required");
+      Swal.fire({
+        title: "Tes",
+        customClass: {
+          container: "swal-modal",
+        },
+      });
     } else {
       // imageRef.current.src = URL.createObjectURL(productImg.current.files[0]);
       const reader = new FileReader();
@@ -151,6 +169,7 @@ export default function Form() {
           id="productCategory"
           value={productCategory}
           onChange={handleProductCategory}
+          data-testid="productCategory"
         >
           <option value="">Choose</option>
           <option value="One">One</option>
@@ -166,6 +185,7 @@ export default function Form() {
             id="productImage"
             ref={productImg}
             onChange={handleProductImg}
+            data-testid="productCategory"
           />
         </div>
 
@@ -270,9 +290,11 @@ export default function Form() {
             <tr key={product.id}>
               <td>{parseInt(product.id.split("-")[0], 16) % 10000}</td>
               <td data-testid="productNameCol">{product.productName}</td>
-              <td>{product.productCategory}</td>
-              <td>{product.productFreshness}</td>
-              <td>{product.productPrice}</td>
+              <td data-testid="productCategoryCol">
+                {product.productCategory}
+              </td>
+              <td data-testid="productFreshCol">{product.productFreshness}</td>
+              <td data-testid="productPriceCol">{product.productPrice}</td>
               <td>
                 <img src="" width={100} ref={imageRef} />
               </td>
