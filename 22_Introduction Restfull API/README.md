@@ -7,6 +7,12 @@ adalah suatu fungsi atau prosedur yang memperbolehkan untuk membuat sebuah aplik
 - URL berisi alamat dari sumber daya API yang diminta 
 - method HTTP menentukan tindakan yang diambil oleh server 
 - header berisi informasi tambahan seperti authentikasi dan tipe konten 
-- body berisi data yang dikirimkan ke server
-**Response**: balasan yang diberikan oleh server setelah menerima request dari komputer pengguna. Response juga terdiri dari beberapa komponen, termasuk status code, header, dan body. Status code memberi tahu aplikasi atau pengguna aplikasi apakah request berhasil atau gagal, header berisi informasi tambahan seperti tipe konten dan waktu kadaluwarsa, dan body berisi data yang diminta.
+- body berisi data yang dikirimkan ke server <br>
 
+**Response**: balasan yang diberikan oleh server setelah menerima request dari komputer pengguna. Response juga terdiri dari beberapa komponen, termasuk status code, header, dan body. 
+- Status code memberi tahu aplikasi atau pengguna aplikasi apakah request berhasil atau gagal
+- header berisi informasi tambahan seperti tipe konten dan waktu kadaluwarsa
+- body berisi data yang diminta
+
+## RestAPI (Representational State Tranfer API) ##
+adalah jenis API yang dapat diakses dan dimanipulasi datanya, REST API menggunakan HTTP untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada sumber daya melalui permintaan HTTP yang disebut request.
