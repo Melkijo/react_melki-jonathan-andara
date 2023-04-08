@@ -4,7 +4,9 @@ adalah suatu fungsi atau prosedur yang memperbolehkan untuk membuat sebuah aplik
 
 ### Cara kerja API ###
 **Request**: permintaan yang dikirimkan oleh komputer pengguna ke sebuah server API, permintaan ini bisa meminta server untuk melakukan operasi seperti mengambil data atau mengelolah data tersebut Request terdiri dari beberapa komponen, termasuk URL, method HTTP, header, dan body. <br>
-RL berisi alamat dari sumber daya API yang diminta <br>
-method HTTP menentukan tindakan yang diambil oleh server header berisi informasi tambahan seperti authentikasi dan tipe konten, dan body berisi data yang dikirimkan ke server. <br>
+- URL berisi alamat dari sumber daya API yang diminta 
+- method HTTP menentukan tindakan yang diambil oleh server 
+- header berisi informasi tambahan seperti authentikasi dan tipe konten 
+- body berisi data yang dikirimkan ke server
 **Response**: balasan yang diberikan oleh server setelah menerima request dari komputer pengguna. Response juga terdiri dari beberapa komponen, termasuk status code, header, dan body. Status code memberi tahu aplikasi atau pengguna aplikasi apakah request berhasil atau gagal, header berisi informasi tambahan seperti tipe konten dan waktu kadaluwarsa, dan body berisi data yang diminta.
 
