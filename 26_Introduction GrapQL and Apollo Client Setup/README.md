@@ -10,7 +10,7 @@ Perbedaan utama antara GraphQL dan REST adalah bahwa pada REST, klien harus mela
 ### Main Features in GraphQL ###
 1. Query
 adalah permintaan untuk mendapatkan data dari server. Query pada GraphQL mirip dengan GET request pada REST API. 
-``` javascript
+``` graphql
 query{
   products{
     name
@@ -20,6 +20,25 @@ query{
 }
 ```
 2. Mutation
-dalah permintaan untuk memodifikasi data pada server. Mutation pada GraphQL mirip dengan POST, PUT, atau DELETE request pada REST API.
-
+adalah permintaan untuk memodifikasi data pada server. Mutation pada GraphQL mirip dengan POST, PUT, atau DELETE request pada REST API.
+``` graphql
+mutation {
+  addBook(title: "Belajar GraphQL", author: "John Doe", year: 2022) {
+    title
+    author
+    year
+  }
+}
+```
 3. Subscription
+adalah permintaan untuk menerima notifikasi dari server ketika terjadi perubahan pada data yang diinginkan. Subscription pada GraphQL mirip dengan WebSocket pada REST API.
+```graphql
+subscription {
+  bookAdded {
+    title
+    author
+    year
+  }
+}
+```
+
