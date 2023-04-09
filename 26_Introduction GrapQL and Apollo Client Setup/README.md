@@ -55,6 +55,6 @@ adalah proses konfigurasi dan pengaturan Apollo Client, sebuah library client-si
 ```
 3. Inisialisasi apolloClient
 pada index.js file import
-``javascript
-import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+```javascript
+  import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 ```
