@@ -14,8 +14,8 @@ adalah permintaan untuk mendapatkan data dari server. Query pada GraphQL mirip d
 query{
   products{
     name
-    price
     category
+    price
   }
 }
 ```
@@ -23,10 +23,10 @@ query{
 adalah permintaan untuk memodifikasi data pada server. Mutation pada GraphQL mirip dengan POST, PUT, atau DELETE request pada REST API.
 ``` graphql
 mutation {
-  addBook(title: "Belajar GraphQL", author: "John Doe", year: 2022) {
-    title
-    author
-    year
+  addProduct(name: "momogi", category: "brand new", price: 5000) {
+    name
+    category
+    price
   }
 }
 ```
@@ -34,10 +34,10 @@ mutation {
 adalah permintaan untuk menerima notifikasi dari server ketika terjadi perubahan pada data yang diinginkan. Subscription pada GraphQL mirip dengan WebSocket pada REST API.
 ```graphql
 subscription {
-  bookAdded {
-    title
-    author
-    year
+  productAdded {
+    name
+    category
+    price
   }
 }
 ```
