@@ -10,7 +10,7 @@ Perbedaan utama antara GraphQL dan REST adalah bahwa pada REST, klien harus mela
 ### Main Features in GraphQL ###
 1. Query
 adalah permintaan untuk mendapatkan data dari server. Query pada GraphQL mirip dengan GET request pada REST API. 
-``` grapql
+``` query
 query{
   products{
     name
