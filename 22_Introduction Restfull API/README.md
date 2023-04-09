@@ -1,8 +1,9 @@
 # (22) Introduction Restfull API #
-## API (Application Programming Interface ##
+## API (Application Programming Interface) ##
 adalah suatu fungsi atau prosedur yang memperbolehkan untuk membuat sebuah aplikasi berkomunikasi ke data atau fitur dari sumber eksternal
 
 ### Cara kerja API ###
+[![image](https://user-images.githubusercontent.com/93898408/230752234-e761f84f-7bd4-4862-bf7e-d20f5a6b3570.png)]( {https://bytesofgigabytes.com/networking/how-http-request-and-response-works/} )
 **Request**: permintaan yang dikirimkan oleh komputer pengguna ke sebuah server API, permintaan ini bisa meminta server untuk melakukan operasi seperti mengambil data atau mengelolah data tersebut Request terdiri dari beberapa komponen, termasuk URL, method HTTP, header, dan body. <br>
 - URL berisi alamat dari sumber daya API yang diminta 
 - method HTTP menentukan tindakan yang diambil oleh server 
