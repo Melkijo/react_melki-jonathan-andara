@@ -8,6 +8,6 @@ dua hal tersebut adalah hal yang berbeda, karena fungsi dari aunthentication dig
 3. **OAuth**: Metode autentikasi yang memungkinkan pengguna untuk login menggunakan akun media sosial atau layanan pihak ketiga lainnya. 
 
 ## Tipe Authorization ##
-1. Role-Based Access Control (RBAC): Metode otorisasi yang membatasi akses berdasarkan peran atau level akses pengguna. 
-2. Attribute-Based Access Control (ABAC): Metode otorisasi yang membatasi akses berdasarkan atribut pengguna atau kondisi lainnya. 
-3. Role-Based Access Control with Context (RBC): Metode otorisasi yang memperluas RBAC dengan menambahkan informasi kontekstual untuk memberikan hak akses yang lebih spesifik.
+1. **Role-Based Access Control (RBAC)**: Metode otorisasi yang membatasi akses berdasarkan peran atau level akses pengguna. 
+2. **Attribute-Based Access Control (ABAC)**: Metode otorisasi yang membatasi akses berdasarkan atribut pengguna atau kondisi lainnya. 
+3. **Role-Based Access Control with Context (RBC)**: Metode otorisasi yang memperluas RBAC dengan menambahkan informasi kontekstual untuk memberikan hak akses yang lebih spesifik.
