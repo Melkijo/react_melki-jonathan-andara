@@ -6,10 +6,14 @@ import ProductDesc from "../components/productDesc";
 import "./Form.css";
 import RandomNumberBtn from "../components/RandomNumberBtn";
 import { v4 as uuidv4 } from "uuid";
-
+import { useSelector, useDispatch } from "react-redux";
+import { hapusProduct, tambahProduct } from "../store/productSlice";
 import { useState } from "react";
 
 export default function Form() {
+  const products = useSelector((state) => state.product.products);
+  const dispatch = useDispatch();
+
   const [productName, setProductName] = useState("");
   const [productCategory, setProductCategory] = useState("");
   const [productFreshness, setProductFreshness] = useState("");
@@ -41,8 +45,9 @@ export default function Form() {
       productPrice: productPrice,
     };
 
+    dispatch(tambahProduct(newProduct));
     setProductList([...productList, newProduct]);
-
+    console.log(products);
     setProductName("");
     setProductCategory("");
     setProductFreshness("");
@@ -69,6 +74,7 @@ export default function Form() {
 
   useEffect(() => {
     Swal.fire("Welcome to Create Product");
+    console.log(products.products);
   }, []);
 
   return (
@@ -186,7 +192,7 @@ export default function Form() {
           </tr>
         </thead>
         <tbody>
-          {productList.map((product, index) => (
+          {products.map((product, index) => (
             <tr key={product.id}>
               <td>{parseInt(product.id.split("-")[0], 16) % 10000}</td>
               <td>{product.productName}</td>
@@ -200,7 +206,9 @@ export default function Form() {
                 <button
                   type="button"
                   className="btn-delete"
-                  onClick={() => handleDeleteProduct(index, product)}
+                  onClick={() => {
+                    dispatch(hapusProduct(product.id));
+                  }}
                 >
                   Delete
                 </button>
