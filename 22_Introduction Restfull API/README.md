@@ -16,3 +16,25 @@ adalah suatu fungsi atau prosedur yang memperbolehkan untuk membuat sebuah aplik
 
 ## RestAPI (Representational State Tranfer API) ##
 adalah jenis API yang dapat diakses dan dimanipulasi datanya, REST API menggunakan HTTP untuk melakukan operasi CRUD (Create, Read, Update, Delete) pada sumber daya melalui permintaan HTTP yang disebut request.
+### HTTP Request Method ###
+- GET : Mengambil data
+- POST : Membuat data baru
+- PUT : Mengganti data yang sudah ada
+- DELETE : Menghapus data
+### HTTP Response Code ###
+- 500 : internal server error
+- 400 : Bad Request
+- 404 : Not Found
+- 200 : OK
+- 401 : Unouthorized
+
+### REST API Best Practice ###
+1. Gunakan HTTP Method yang sesuai dengan tindakan yang dilakukan
+2. gunakan URI (Uniform Resource Name) yang deskriptif dan mudah dipahami
+3. Gunakan format respon yang konsisten (JSON atau XML)
+4. Berikan error handling yang spesifik dan jelas untuk setiap kesalahan
+5. Gunakan versioning pada URI untuk memudahkan upgrade atau penambahan fitur pada API
+
+## Resource ##
+- https://www.restapitutorial.com/
+- https://restcookbook.com/
