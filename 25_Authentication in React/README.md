@@ -11,3 +11,6 @@ dua hal tersebut adalah hal yang berbeda, karena fungsi dari aunthentication dig
 1. **Role-Based Access Control (RBAC)**: Metode otorisasi yang membatasi akses berdasarkan peran atau level akses pengguna. 
 2. **Attribute-Based Access Control (ABAC)**: Metode otorisasi yang membatasi akses berdasarkan atribut pengguna atau kondisi lainnya. 
 3. **Role-Based Access Control with Context (RBC)**: Metode otorisasi yang memperluas RBAC dengan menambahkan informasi kontekstual untuk memberikan hak akses yang lebih spesifik.
+
+## Kenapa perlu authentication dan authorization ##
+hal ini diperlukan untuk menjaga agar sistem tetap aman, karena dengan diimplementasikan verifikasi dan authorisasi dapat memberikan hak akses yang spesifik terhadap role dari pengguna dan mengetahui jika yang benar" masuk ke sistem adalah pengguna yang sudah terdaftar.
