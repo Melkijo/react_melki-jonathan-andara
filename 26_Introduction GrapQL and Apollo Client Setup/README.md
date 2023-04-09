@@ -58,3 +58,4 @@ pada index.js file import
 ```javascript
   import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 ```
+selamat apolloClient dapat digunakan, dokumentasi lebih lengkap [apolloClient](https://www.apollographql.com/docs/react/get-started/)
