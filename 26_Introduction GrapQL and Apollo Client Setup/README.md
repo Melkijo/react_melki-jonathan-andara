@@ -42,3 +42,17 @@ subscription {
 }
 ```
 
+## Apollo Client Setup ##
+adalah proses konfigurasi dan pengaturan Apollo Client, sebuah library client-side GraphQL yang digunakan untuk mengakses API GraphQL.
+### How to install ###
+1. Create react project
+```console
+  yarn create vite vite-project
+```
+2. Install depedencies
+```console
+  yarn add @apollo/client graphql
+```
+3. Inisialisasi apolloClient
+pada index.js file import
+``import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';``
