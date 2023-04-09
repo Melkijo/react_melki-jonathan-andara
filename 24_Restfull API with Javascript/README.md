@@ -6,7 +6,7 @@ adalah API palsu yang digunakan untuk menguji dan mengembangkan aplikasi tanpa m
 - respon feedback yang cepat
 - dapat menemukan kesalahan lebih cepat <br>
 ### Rekomendasi Mock API: ###
-- [Beeceptor](https://beeceptor.com/)sdfa
-- MockAPI
-- Postman Mock server
-- stoplight
+- [Beeceptor](https://beeceptor.com/)
+- [MockAPI](https://mockapi.io/)
+- [Postman Mock server](https://learning.postman.com/docs/designing-and-developing-your-api/mocking-data/setting-up-mock/)
+- [stoplight](https://stoplight.io/)
