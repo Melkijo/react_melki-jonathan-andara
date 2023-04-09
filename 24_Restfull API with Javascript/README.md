@@ -5,7 +5,7 @@ adalah API palsu yang digunakan untuk menguji dan mengembangkan aplikasi tanpa m
 - frontend dan backend dalam bekerja secara paralel
 - respon feedback yang cepat
 - dapat menemukan kesalahan lebih cepat <br>
-Rekomendasi Mock API:
+### Rekomendasi Mock API: ###
 - Beeceptor 
 - MockAPI
 - Postman Mock server
