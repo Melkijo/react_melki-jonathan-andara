@@ -1,0 +1,19 @@
+.containerForm {
+    padding: 0 30%;
+}
+
+.btn-edit {
+    background-color: rgb(252, 252, 130) !important;
+    padding: 5px 15px;
+    color: black;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-delete {
+    background-color: red !important;
+    padding: 5px 15px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
