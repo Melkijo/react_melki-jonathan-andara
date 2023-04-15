@@ -3,7 +3,7 @@
 <small>https://graphql.org/brand/<small>
 ## GraphQL Query ##
 adalah permintaan yang dikirim ke server graphQL untuk meminta sebuah data, contoh code:
-```javascript
+```graphql
 query MyQuery {
     product {
       id
