@@ -1,5 +1,5 @@
 # (27) GraphQL Query and Mutation #
-![image](https://user-images.githubusercontent.com/93898408/232233598-8f14f97b-1569-4d4d-8619-34c56d82121d.png)
+![image](https://user-images.githubusercontent.com/93898408/232233598-8f14f97b-1569-4d4d-8619-34c56d82121d.png) <br>
 <small>https://graphql.org/brand/<small>
 ## GraphQL Query ##
 Query adalah permintaan untuk mendapatkan data dari server. Query pada GraphQL mirip dengan GET request, contoh code:
