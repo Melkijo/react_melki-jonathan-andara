@@ -1,7 +1,7 @@
 # (27) GraphQL Query and Mutation #
 ## GraphQL Query ##
 adalah permintaan yang dikirim ke server graphQL untuk meminta sebuah data, contoh code:
-`javascript
+```javascript
 query MyQuery {
     product {
       id
@@ -13,4 +13,4 @@ query MyQuery {
       created_at
     }
   }
-`
+```
