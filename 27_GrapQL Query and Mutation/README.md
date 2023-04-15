@@ -28,8 +28,10 @@ query MyQuery {
 ```
 GraphQL Query memiliki keunggulan dalam efisiensi dan fleksibilitas, karena hanya meminta data yang diperlukan dan kita dapat menentukan format data yang ingin dikirim.
 
+
 ## GraphQL Mutation ##
-permintaan untuk memodifikasi data pada server. Mutation pada GraphQL mirip dengan POST, PUT, atau DELETE request
+permintaan untuk memodifikasi data pada server. Mutation pada GraphQL mirip dengan POST, PUT, atau DELETE request. GraphQL Mutation memiliki keunggulan dalam efisiensi dan fleksibilitas, karena hanya melakukan operasi yang diperlukan dan memungkinkan kita untuk menentukan format data yang ingin diterima setelah operasi tersebut berhasil dilakukan. 
+
 ### Delete ###
 ```graphql 
 mutation MyMutation {
@@ -65,3 +67,5 @@ mutation MyMutation {
 }
 ```
 code diatas kaan meng-edit data dengan id yang sesuai
+
+
