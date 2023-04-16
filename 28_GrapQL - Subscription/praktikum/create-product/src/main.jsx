@@ -7,11 +7,9 @@ import Form from "./pages/Form";
 import Login from "./pages/Login";
 import App from "./App";
 import StoreManagement from "./pages/StoreManagement";
-import { GraphQLWsLink } from "@apollo/client/link/subscriptions";
-import { createClient } from "graphql-ws";
 import { split, HttpLink } from "@apollo/client";
 import { getMainDefinition } from "@apollo/client/utilities";
-
+import { WebSocketLink } from "@apollo/client/link/ws";
 const httpLink = new HttpLink({
   uri: "https://neat-teal-79.hasura.app/v1/graphql",
   headers: {
@@ -20,20 +18,18 @@ const httpLink = new HttpLink({
   },
 });
 
-const wsLink = new GraphQLWsLink(
-  createClient({
-    uri: "wss://neat-teal-79.hasura.app/v1/graphql",
-    options: {
-      reconnect: true,
-      connectionParams: {
-        headers: {
-          "x-hasura-admin-secret":
-            "7gUDpx46vxoIGsvZq03il3OF2CRjBlSHUjYYSzJPHyoDACaAruOdeOIs29nfNacT",
-        },
+const wsLink = new WebSocketLink({
+  uri: `wss://neat-teal-79.hasura.app/v1/graphql`,
+  options: {
+    reconnect: true,
+    connectionParams: {
+      headers: {
+        "x-hasura-admin-secret":
+          "7gUDpx46vxoIGsvZq03il3OF2CRjBlSHUjYYSzJPHyoDACaAruOdeOIs29nfNacT",
       },
     },
-  })
-);
+  },
+});
 
 const splitLink = split(
   ({ query }) => {

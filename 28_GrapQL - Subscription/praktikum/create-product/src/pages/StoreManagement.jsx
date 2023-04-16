@@ -1,19 +1,19 @@
-import { useQuery, gql, useMutation } from "@apollo/client";
+import { useQuery, gql, useMutation, useSubscription } from "@apollo/client";
 import Card from "react-bootstrap/Card";
 import CardImg from "../assets/Vector.jpg";
 import Navbar from "../components/Navbar";
 import Button from "react-bootstrap/Button";
 
 const GET_PRODUCTS = gql`
-  query MyQuery {
+  subscription MySubscription {
     product {
       id
-      aditional_information
-      price
-      product_category
-      product_freshness
       product_name
+      product_freshness
+      product_category
+      price
       created_at
+      aditional_information
     }
   }
 `;
@@ -37,7 +37,7 @@ const UPDATE_PRODUCT = gql`
   }
 `;
 export default function StoreManagement() {
-  const { loading, error, data } = useQuery(GET_PRODUCTS, {
+  const { loading, error, data } = useSubscription(GET_PRODUCTS, {
     refetchQueries: [GET_PRODUCTS],
   });
   const [deleteProduct, { loading: loadingDelete }] = useMutation(
