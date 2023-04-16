@@ -81,5 +81,5 @@ variabel client digunakan untuk melakukan manajemen state, Parameter link berisi
 ApolloProvider biasanya digunakan sebagai wrapper pada komponen-komponen utama yang akan terhubung dengan API GraphQL. Dengan demikian, setiap komponen yang memiliki akses ke ApolloProvider akan dapat menggunakan instance Apollo Client untuk melakukan query dan mutation ke API GraphQL.
 
 ## Resource ##
-[apollo graphql](https://www.apollographql.com/docs/react/data/subscriptions/#1-install-required-libraries)
-[hasura](https://hasura.io/docs/latest/subscriptions/postgres/index/)
+- [apollo graphql](https://www.apollographql.com/docs/react/data/subscriptions/#1-install-required-libraries) <br>
+- [hasura](https://hasura.io/docs/latest/subscriptions/postgres/index/)
