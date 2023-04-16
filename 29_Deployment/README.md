@@ -4,3 +4,6 @@ Deploy adalah proses meluncurkan sebuah web yang dikembangkan pada lokal atau li
 tujuan melakukan build adalaha agar web kita menjadi versi production, sehingga performannya lebih ringat dan cepat. <br>
 ` yarn build ` <br>
 
+## My web ##
+[my web](https://create-product-qqngvxsz4-melkijo.vercel.app/)
+
