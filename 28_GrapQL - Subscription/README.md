@@ -26,6 +26,7 @@ import { WebSocketLink } from "@apollo/client/link/ws";
 ```
 function yg kita import disini akan digunakan untuk melakukan proses subscription
 
+### function ###
 ```javascript
 const httpLink = new HttpLink({
   uri: "https://neat-teal-79.hasura.app/v1/graphql",
@@ -70,3 +71,15 @@ const client = new ApolloClient({
 ```
 
 variabel client digunakan untuk melakukan manajemen state, Parameter link berisi sebuah objek splitLink, yang merupakan konfigurasi untuk menghubungkan aplikasi dengan GraphQL API. Parameter cache berisi instance dari kelas InMemoryCache, yang merupakan tempat untuk menyimpan data yang diterima dari API dan diolah oleh aplikasi. 
+
+### use ###
+```javascript
+<ApolloProvider client={client}>
+      <RouterProvider router={router} />
+    </ApolloProvider>
+```
+ApolloProvider biasanya digunakan sebagai wrapper pada komponen-komponen utama yang akan terhubung dengan API GraphQL. Dengan demikian, setiap komponen yang memiliki akses ke ApolloProvider akan dapat menggunakan instance Apollo Client untuk melakukan query dan mutation ke API GraphQL.
+
+## Resource ##
+[apollo graphql](https://www.apollographql.com/docs/react/data/subscriptions/#1-install-required-libraries)
+[hasura](https://hasura.io/docs/latest/subscriptions/postgres/index/)
