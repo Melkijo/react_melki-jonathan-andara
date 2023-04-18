@@ -1,11 +1,10 @@
 import "./App.css";
 import MainPage from "./pages/MainPage";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <>
       <MainPage />
-      <h1>hai</h1>
     </>
   );
 }

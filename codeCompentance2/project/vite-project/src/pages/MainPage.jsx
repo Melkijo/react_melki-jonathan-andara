@@ -107,6 +107,7 @@ export default function MainPage() {
               </div>
             ))}
           </div>
+          <Button text="See More"></Button>
         </div>
       </div>
     </>
