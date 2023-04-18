@@ -5,8 +5,8 @@ tujuan melakukan build adalah agar web kita menjadi versi production, sehingga p
 cara melakukan build : 
 ` yarn build ` <br>
 ## Rekomendasi hosting ##
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+- [Vercel](https://vercel.com/) : biasanya digunakan untuk latihan
+- [Netlify](https://www.netlify.com/) : bisa digunakan untuk commercial
 ## Cara Hosting menggunakan Vercel ##
 1. Membuat akun Vercel <br>
 Buat akun di Vercel dan verifikasi email.
