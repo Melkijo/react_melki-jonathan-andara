@@ -9,6 +9,7 @@ import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
+import AboutUs from "../components/AboutUs";
 
 export default function MainPage() {
   const [firstName, setFirstName] = useState("");
@@ -20,9 +21,10 @@ export default function MainPage() {
   const [titles, setTitle] = useState(jobs[0]);
 
   useEffect(() => {
-    setInterval(() => {
+    const intervalId = setInterval(() => {
       setTitle(jobs[Math.floor(Math.random() * 3)]);
-    }, 500);
+    }, 1000);
+    return () => clearInterval(intervalId);
   }, []);
 
   const handleOnSubmit = (e) => {
@@ -33,7 +35,7 @@ export default function MainPage() {
     } else {
       Swal.fire({
         icon: "success",
-        title: `Thank You ${firstName}`,
+        title: `Thank You ${firstName} ${lastName}`,
         text: "We will quickly review and respond to the message 😊",
         width: "24rem",
       });
@@ -45,7 +47,11 @@ export default function MainPage() {
   };
   return (
     <>
-      <div className="hero-section" style={{ backgroundColor: " #373B4C" }}>
+      <div
+        className="hero-section"
+        id="home"
+        style={{ backgroundColor: " #373B4C" }}
+      >
         <NavbarComp />
         <Container>
           <div className="row flex-wrap-reverse">
@@ -63,18 +69,21 @@ export default function MainPage() {
               </p>
               <div className="row row-cols-auto align-items-center mt-3">
                 <div className="col">
-                  <Button
-                    style={{
-                      backgroundColor: "#01CC8E",
-                      border: "none",
-                      padding: "10px 17px",
-                      fontWeight: 600,
-                      marginRight: "20px",
-                    }}
-                  >
-                    Contact Me
-                    <i className="fa-solid fa-arrow-up-right-from-square ms-3"></i>{" "}
-                  </Button>
+                  <a href="#contact">
+                    <Button
+                      style={{
+                        backgroundColor: "#01CC8E",
+                        border: "none",
+                        padding: "10px 17px",
+                        fontWeight: 600,
+                        marginRight: "20px",
+                      }}
+                    >
+                      Contact Me
+                      <i className="fa-solid fa-arrow-up-right-from-square ms-3"></i>{" "}
+                    </Button>
+                  </a>
+
                   <a
                     href="https://drive.google.com/drive/folders/1eXBgidvfvXeNtLSkNd3lw_YTtlfgY7B4?usp=sharing"
                     target="_blank"
@@ -178,10 +187,7 @@ export default function MainPage() {
                   >
                     {testimonial.name}
                   </p>
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur. Dictumst mauris
-                    fermentum luctus cursus massa.
-                  </p>
+                  <p>{testimonial.comment}</p>
                 </div>
               </Col>
             ))}
@@ -189,68 +195,11 @@ export default function MainPage() {
         </Container>
       </div>
 
-      <div
-        className="about-section"
-        style={{
-          backgroundColor: " #373B4C",
-          padding: "50px 0",
-        }}
-      >
-        <h2 className="title-section mb-4 text-center">
-          About <span style={{ color: "#01CC8E" }}>Me</span>
-        </h2>
-
-        <Container>
-          <Row className="">
-            <Col className="about-activity" lg={4} md={12}>
-              <p
-                style={{
-                  fontWeight: 600,
-                  fontSize: "24px",
-                  marginBottom: "10px",
-                }}
-              >
-                My
-                <span style={{ color: "#01CC8E" }}> Activity</span>{" "}
-              </p>
-              <ul>
-                <li>
-                  Participants in Gemastik XV in User Experience Design Field
-                </li>
-                <li>Chairperson of the 2022 UKM Oikumene Joint Easter</li>
-                <li>Design Coordinator of the 2022 UKM Oikumene Anniversary</li>
-                <li>Design Coordinator of Christmas with UKM Oikumene 2022</li>
-              </ul>
-            </Col>
-            <Col className="text-center about-img" lg={4} md={12}>
-              <img src="../src/assets/img/persona.png" alt=""></img>
-            </Col>
-            <Col className="about-story" lg={4} md={12}>
-              <p
-                style={{
-                  fontWeight: 600,
-                  fontSize: "24px",
-                  marginBottom: "10px",
-                }}
-              >
-                Story of
-                <span style={{ color: "#01CC8E" }}> my life</span>{" "}
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur. In montes quis auctor
-                lorem lorem ut ante neque urna. Aenean sit purus nunc eget velit
-                urna in. Vel et porttitor quis sed eget. Etiam lorem aliquam non
-                vivamus augue pharetra amet iaculis quam. Sit elementum purus at
-                aliquet in in bibendum pellentesque quam. Justo feugiat lacus
-                porttitor sodales mauris.{" "}
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      <AboutUs />
 
       <div
         className="contact-section"
+        id="contact"
         style={{ backgroundColor: " #373B4C", padding: "50px 0" }}
       >
         <h2 className="title-section text-center mb-4">
@@ -271,10 +220,13 @@ export default function MainPage() {
                 Connect with <span style={{ color: "#01CC8E" }}>Me</span>
               </p>
               <p>
-                Lorem ipsum dolor sit amet consectetur. Fringilla metus molestie
-                sit integer. Sagittis eu turpis at ante curabitur eget nec
-                adipiscing consequat. Velit convallis congue tortor facilisi.
-                Mauris nisl sed id massa. Ullamcorper ullamcorper purus.
+                Anda telah datang ke tempat yang tepat! Saya menawarkan jasa
+                pembuatan website yang terjangkau dan berkualitas tinggi untuk
+                membantu meningkatkan online presence bisnis Anda. Segera
+                hubungi saya dan kita bisa berdiskusi lebih lanjut tentang
+                bagaimana saya bisa membantu Anda mencapai tujuan online Anda.
+                Terima kasih telah mengunjungi website saya dan saya sangat
+                berharap dapat bekerja sama dengan Anda!"
               </p>
             </Col>
             <Col lg={6}>

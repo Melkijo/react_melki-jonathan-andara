@@ -42,10 +42,10 @@ export default function NavbarComp() {
             <Nav.Link href="#home" style={{ color: "white" }}>
               Home
             </Nav.Link>
-            <Nav.Link href="#features" style={{ color: "white" }}>
+            <Nav.Link href="#portfolio" style={{ color: "white" }}>
               Portfolio
             </Nav.Link>
-            <Nav.Link href="#pricing" style={{ color: "white" }}>
+            <Nav.Link href="#about" style={{ color: "white" }}>
               About
             </Nav.Link>
           </Nav>
