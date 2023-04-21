@@ -1,46 +1,421 @@
-import Navbar from "../components/Navbar";
+import NavbarComp from "../components/NavbarComp";
 import "./MainPage.css";
-import HeroImage from "../assets/img/Saly-39-edit.png";
-import Button from "../components/Button";
-import { projects } from "../portfolioList";
+import HeroImage from "../assets/img/heroImg.svg";
+import { portfolios, testimonials } from "../dataList";
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
+
 export default function MainPage() {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [comment, setComment] = useState("");
+
+  const jobs = ["Student", "Frontend Web", "UI/UX Designer"];
+  const [titles, setTitle] = useState(jobs[0]);
+
+  useEffect(() => {
+    setInterval(() => {
+      setTitle(jobs[Math.floor(Math.random() * 3)]);
+    }, 500);
+  }, []);
+
+  const handleOnSubmit = (e) => {
+    e.preventDefault();
+    console.log(firstName, lastName, email, comment);
+    if (firstName === "" || lastName === "" || email === "" || comment === "") {
+      Swal.fire("All input required");
+    } else {
+      Swal.fire({
+        icon: "success",
+        title: `Thank You ${firstName}`,
+        text: "We will quickly review and respond to the message 😊",
+        width: "24rem",
+      });
+      setFirstName("");
+      setLastName("");
+      setEmail("");
+      setComment("");
+    }
+  };
   return (
     <>
-      <div className="hero-section">
-        <Navbar />
-        <div className="hero-content">
-          <div className="row">
-            <div className="col mt-3">
-              <p
-                style={{
-                  color: "#01CC8E",
-                  fontSize: "1.7rem",
-                  fontWeight: 400,
-                }}
-              >
-                Hai 👋, I’m{" "}
-                <span style={{ fontWeight: 900, color: "inherit" }}>ME</span>
-                lki{" "}
-                <span style={{ fontWeight: 900, color: "inherit" }}>JO</span>
-                nathan{" "}
+      <div className="hero-section" style={{ backgroundColor: " #373B4C" }}>
+        <NavbarComp />
+        <Container>
+          <div className="row flex-wrap-reverse">
+            <div className="col" style={{ marginTop: "50px" }}>
+              <p className="hero-title-name">
+                Hai 👋, I’m Melki Jonathan{" "}
+                <span className="hero-title-job">{titles}</span>
               </p>
-              <p
-                style={{
-                  fontSize: "3rem",
-                  fontWeight: 900,
-                  letterSpacing: "0.03em",
-                }}
-              >
+              <p className="hero-title">
                 Students of Informatics Engineering University of Mataram
               </p>
               <p style={{ fontSize: "1.2rem", fontWeight: 300 }}>
                 Order your website today and start competing in the online
                 marketplace take advantage of this amazing opportunity!{" "}
               </p>
-              <div className="row row-cols-auto align-items-center mt-2">
+              <div className="row row-cols-auto align-items-center mt-3">
                 <div className="col">
-                  <Button text="Contact Me" />
+                  <Button
+                    style={{
+                      backgroundColor: "#01CC8E",
+                      border: "none",
+                      padding: "10px 17px",
+                      fontWeight: 600,
+                      marginRight: "20px",
+                    }}
+                  >
+                    Contact Me
+                    <i className="fa-solid fa-arrow-up-right-from-square ms-3"></i>{" "}
+                  </Button>
+                  <a
+                    href="https://drive.google.com/drive/folders/1eXBgidvfvXeNtLSkNd3lw_YTtlfgY7B4?usp=sharing"
+                    target="_blank"
+                    style={{ color: "white" }}
+                  >
+                    Download cv
+                  </a>
                 </div>
+              </div>
+            </div>
+            <div className="col text-center">
+              <img src={HeroImage} className="hero-img" />
+            </div>
+          </div>
+        </Container>
+      </div>
+      <div
+        className="portfolio-section"
+        id="portfolio"
+        style={{
+          backgroundColor: "#272936",
+          textAlign: "center",
+          padding: "50px 0",
+        }}
+      >
+        <Container>
+          <h2 className="title-section">
+            My <span style={{ color: "#01CC8E" }}>Portfolio</span>
+          </h2>
+          <p className="mb-4">Good product born from good designer</p>
+          <Row className="m-0 justify-content-center px-5">
+            {portfolios.map((portfolio) => (
+              <Col key={portfolio.id} lg={6} className="mb-5">
+                <div>
+                  <div className="container-port-img">
+                    <img
+                      src={portfolio.image}
+                      className="port-img img-fluid"
+                      alt=""
+                      style={{ borderRadius: "5px" }}
+                    />
+                  </div>
+
+                  <div
+                    className="port-detail d-flex align-items-center"
+                    style={{ justifyContent: "space-between" }}
+                  >
+                    <div>
+                      <a
+                        href="https://www.behance.net/search/projects?search=portfolio+website+design&tracking_source=typeahead_nav_recent_suggestion"
+                        style={{ color: "white" }}
+                      >
+                        View Detail
+                      </a>
+                    </div>
+                    <div className="mt-0">
+                      <img
+                        src="./src/assets/img/figma2.svg"
+                        style={{ width: 40 }}
+                        alt=""
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
+
+      <div
+        className="testimonial-section"
+        style={{
+          backgroundColor: "#272936",
+          textAlign: "center",
+          padding: "50px 0",
+        }}
+      >
+        <h2 className="title-section">
+          What My <span style={{ color: "#01CC8E" }}>Client</span> Say
+        </h2>
+        <p className="mb-4">Good Product born from good designer</p>
+
+        <Container>
+          <Row>
+            {testimonials.map((testimonial) => (
+              <Col key={testimonial.id} lg={4} md={12}>
+                <div
+                  className="testimonial-item"
+                  style={{
+                    border: "#01CC8E 3px solid",
+                    borderRadius: 5,
+                    padding: 35,
+                    margin: "15px 0",
+                  }}
+                >
+                  <img src={testimonial.image} alt="" />
+                  <p
+                    className="mt-3"
+                    style={{ fontWeight: "600", fontSize: "18px", margin: 0 }}
+                  >
+                    {testimonial.name}
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur. Dictumst mauris
+                    fermentum luctus cursus massa.
+                  </p>
+                </div>
+              </Col>
+            ))}
+          </Row>
+        </Container>
+      </div>
+
+      <div
+        className="about-section"
+        style={{
+          backgroundColor: " #373B4C",
+          padding: "50px 0",
+        }}
+      >
+        <h2 className="title-section mb-4 text-center">
+          About <span style={{ color: "#01CC8E" }}>Me</span>
+        </h2>
+
+        <Container>
+          <Row className="">
+            <Col className="about-activity" lg={4} md={12}>
+              <p
+                style={{
+                  fontWeight: 600,
+                  fontSize: "24px",
+                  marginBottom: "10px",
+                }}
+              >
+                My
+                <span style={{ color: "#01CC8E" }}> Activity</span>{" "}
+              </p>
+              <ul>
+                <li>
+                  Participants in Gemastik XV in User Experience Design Field
+                </li>
+                <li>Chairperson of the 2022 UKM Oikumene Joint Easter</li>
+                <li>Design Coordinator of the 2022 UKM Oikumene Anniversary</li>
+                <li>Design Coordinator of Christmas with UKM Oikumene 2022</li>
+              </ul>
+            </Col>
+            <Col className="text-center about-img" lg={4} md={12}>
+              <img src="../src/assets/img/persona.png" alt=""></img>
+            </Col>
+            <Col className="about-story" lg={4} md={12}>
+              <p
+                style={{
+                  fontWeight: 600,
+                  fontSize: "24px",
+                  marginBottom: "10px",
+                }}
+              >
+                Story of
+                <span style={{ color: "#01CC8E" }}> my life</span>{" "}
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. In montes quis auctor
+                lorem lorem ut ante neque urna. Aenean sit purus nunc eget velit
+                urna in. Vel et porttitor quis sed eget. Etiam lorem aliquam non
+                vivamus augue pharetra amet iaculis quam. Sit elementum purus at
+                aliquet in in bibendum pellentesque quam. Justo feugiat lacus
+                porttitor sodales mauris.{" "}
+              </p>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      <div
+        className="contact-section"
+        style={{ backgroundColor: " #373B4C", padding: "50px 0" }}
+      >
+        <h2 className="title-section text-center mb-4">
+          {" "}
+          Lets get in <span style={{ color: "#01CC8E" }}>Touch</span>
+        </h2>
+        <Container>
+          <Row>
+            <Col lg={6}>
+              {" "}
+              <p
+                style={{
+                  fontWeight: 600,
+                  fontSize: "24px",
+                  marginBottom: "10px",
+                }}
+              >
+                Connect with <span style={{ color: "#01CC8E" }}>Me</span>
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur. Fringilla metus molestie
+                sit integer. Sagittis eu turpis at ante curabitur eget nec
+                adipiscing consequat. Velit convallis congue tortor facilisi.
+                Mauris nisl sed id massa. Ullamcorper ullamcorper purus.
+              </p>
+            </Col>
+            <Col lg={6}>
+              <Form
+                onSubmit={(e) => handleOnSubmit(e)}
+                style={{
+                  backgroundColor: "#272936",
+                  padding: "15px 35px",
+                  borderRadius: "5px",
+                }}
+              >
+                <p
+                  style={{
+                    fontWeight: 600,
+                    fontSize: "24px",
+                    marginBottom: "10px",
+                  }}
+                >
+                  Let's make something
+                  <span style={{ color: "#01CC8E" }}> crazy</span>{" "}
+                </p>{" "}
+                <Row>
+                  <Col>
+                    <Form.Group className="mb-3" controlId="firstName">
+                      <Form.Label>First Name</Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="first name"
+                        value={firstName}
+                        onChange={(e) => {
+                          setFirstName(e.target.value);
+                        }}
+                      />
+                    </Form.Group>
+                  </Col>
+                  <Col>
+                    <Form.Group className="mb-3" controlId="lastName">
+                      <Form.Label>Last Name</Form.Label>
+                      <Form.Control
+                        type="text"
+                        placeholder="Last name"
+                        value={lastName}
+                        onChange={(e) => {
+                          setLastName(e.target.value);
+                        }}
+                      />
+                    </Form.Group>
+                  </Col>
+                </Row>
+                <Form.Group className="mb-3" controlId="formGroupEmail">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control
+                    type="email"
+                    placeholder="example@email.co"
+                    value={email}
+                    onChange={(e) => {
+                      setEmail(e.target.value);
+                    }}
+                  />
+                </Form.Group>
+                <Form.Group className="mb-3" controlId="formGroupEmail">
+                  <Form.Label>Comment</Form.Label>
+                  <Form.Control
+                    as="textarea"
+                    placeholder="Leave a comment here"
+                    style={{ height: "100px" }}
+                    value={comment}
+                    onChange={(e) => {
+                      setComment(e.target.value);
+                    }}
+                  />
+                </Form.Group>
+                <Button
+                  style={{
+                    backgroundColor: "#01CC8E",
+                    border: "none",
+                    padding: "10px 17px",
+                    fontWeight: 600,
+                    marginRight: "20px",
+                  }}
+                  type="submit"
+                >
+                  Send <i className="fa-solid fa-paper-plane ms-2"></i>
+                </Button>
+              </Form>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      <div
+        className="footer-section"
+        style={{ backgroundColor: "#272936", padding: "50px 0" }}
+      >
+        <Container>
+          <Row>
+            <Col lg={4} md={12} className="mb-5">
+              <div>
+                <a
+                  href="#"
+                  style={{
+                    fontSize: 42,
+                    fontWeight: 800,
+                    color: "white",
+                    textDecoration: "none",
+                  }}
+                >
+                  <span style={{ color: "#01CC8E" }}>MEJO</span>TECH
+                </a>
+              </div>
+              <p className="m-0">With Great Power Comes Great Responsibility</p>
+            </Col>
+            <Col lg={2} md={6} className="mb-5">
+              <h5>Navigation</h5>
+              <div className="mt-3">
+                <a href="" style={{ color: "white" }}>
+                  Home
+                </a>{" "}
+              </div>
+              <div className="mt-3">
+                <a href="" style={{ color: "white" }}>
+                  Portfolio
+                </a>{" "}
+              </div>
+              <div className="mt-3">
+                <a href="" style={{ color: "white" }}>
+                  About
+                </a>{" "}
+              </div>
+            </Col>
+            <Col lg={3} md={6} className="mb-5">
+              {" "}
+              <h5>Social Media</h5>
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "end",
+                  gap: 20,
+                  marginTop: 15,
+                }}
+              >
                 <a href="">
                   <i className="fa-brands fa-instagram fa-2x" />
                 </a>
@@ -51,63 +426,40 @@ export default function MainPage() {
                   <i className="fa-brands fa-youtube fa-2x" />
                 </a>
               </div>
-              <div className="cv-hero">
-                <a
-                  href="https://drive.google.com/drive/folders/1eXBgidvfvXeNtLSkNd3lw_YTtlfgY7B4?usp=sharing"
-                  target="_blank"
+            </Col>
+            <Col lg={3} md={12}>
+              <h5>My Contact</h5>
+              <div
+                style={{ display: "flex", flexDirection: "column", gap: 20 }}
+              >
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 10,
+                    marginTop: 10,
+                  }}
                 >
-                  Download cv
-                </a>
-              </div>
-            </div>
-            <div className="col" style={{ position: "relative" }}>
-              <img
-                src={HeroImage}
-                style={{
-                  position: "absolute",
-                  top: "-50px",
-                  right: 50,
-                  width: 600,
-                }}
-                alt=""
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-      <div
-        className="portfolio-section"
-        id="portfolio"
-        style={{ backgroundColor: "#272936" }}
-      >
-        <div className="container text-center">
-          <h2>
-            {" "}
-            My <span style={{ color: "#01CC8E" }}>Portfolio</span>
-          </h2>
-          <p>Good product born from good designer</p>
-          <div className="portfolio-change">
-            <button type="button" className="btn btn-success" id="projectsBtn">
-              Project
-            </button>
-            <button
-              type="button"
-              className="btn btn-outline-success"
-              id="eventBtn"
-            >
-              Event
-            </button>
-          </div>
-          <div className="row">
-            {projects.map((project) => (
-              <div className="col-lg-6 p-3" key={project.id}>
-                <div className="portfolio-item ">
-                  <img src={project.image} className="w-100" alt="" />
+                  <p className="m-0">+6281 7752 62221</p>
+                </div>
+                <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                  <p className="m-0">Jln Melati Raya Blok K No 31 BTN Sweta</p>
                 </div>
               </div>
-            ))}
-          </div>
-          <Button text="See More"></Button>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+
+      <div className="copyright-section">
+        <div
+          style={{
+            backgroundColor: "#1d1e27",
+            padding: "15px 0",
+            textAlign: "center",
+          }}
+        >
+          <p className="m-0">©2023 Build with ❤️ by : Melkijo</p>
         </div>
       </div>
     </>
